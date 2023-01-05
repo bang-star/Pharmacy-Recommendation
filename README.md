@@ -31,3 +31,11 @@
    * bas62 를 통한 인코딩 
  * shorten url의 유효 기간을 30일로 제한한다.
 
+## Pharmacy Recommendation Process
+
+<img src="https://user-images.githubusercontent.com/63120360/210836803-6ca550f1-3207-4b4e-9901-b7907364bec0.svg">
+
+## Direction Shorten Url Process
+
+<img src="https://user-images.githubusercontent.com/63120360/210839565-336d3e21-a19c-4bfb-8d49-f3ad1f6e3a33.svg">
+
