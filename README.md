@@ -39,3 +39,18 @@
 
 <img src="https://user-images.githubusercontent.com/63120360/210839565-336d3e21-a19c-4bfb-8d49-f3ad1f6e3a33.svg">
 
+## Tech Stack
+
+ - JDK 17
+ - Spring Boot 2.7.7 
+ - Spring Data JPA 
+ - Gradle 
+ - Handlebars 
+ - Lombok 
+ - Github 
+ - Docker 
+ - AWS EC2
+ - Redis 
+ - MariaDB 
+ - Spock 
+ - Testcontainers
