@@ -1,10 +1,10 @@
-package com.example.api.service;
+package com.example.api.service
 
 import spock.lang.Specification
 
-import java.nio.charset.StandardCharsets;
+import java.nio.charset.StandardCharsets
 
-class KakaoUriBuilderServiceTest extends Specification {
+class KakaoAddressSearchServiceTest extends Specification {
 
     private KakaoUriBuilderService kakaoUriBuilderService
 
@@ -24,5 +24,4 @@ class KakaoUriBuilderServiceTest extends Specification {
         then:
         decodedResult == "https://dapi.kakao.com/v2/local/search/address.json?query=서울 성북구"
     }
-
 }
