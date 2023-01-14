@@ -1,10 +1,9 @@
 package com.example.api.service
 
-import spock.lang.Specification
-
+import com.example.AbstractIntegrationContainerBaseTest
 import java.nio.charset.StandardCharsets
 
-class KakaoAddressSearchServiceTest extends Specification {
+class KakaoAddressSearchServiceTest extends AbstractIntegrationContainerBaseTest {
 
     private KakaoUriBuilderService kakaoUriBuilderService
 
