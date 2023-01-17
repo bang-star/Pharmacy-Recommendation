@@ -1,7 +1,8 @@
-package com.example.repository
+package com.example.pharmacy.repository
 
 import com.example.AbstractIntegrationContainerBaseTest
-import com.example.entity.Pharmacy
+import com.example.pharmacy.entity.Pharmacy
+import com.example.pharmacy.repository.PharmacyRepository
 import org.springframework.beans.factory.annotation.Autowired
 
 class PharmacyRepositoryTest extends AbstractIntegrationContainerBaseTest {

@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.example.pharmacy.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,4 +25,8 @@ public class Pharmacy {
     private String pharmacyAddress;
     private double latitude;
     private double longitude;
+
+    public void changePharmacyAddress(String address) {
+        this.pharmacyAddress = address;
+    }
 }
