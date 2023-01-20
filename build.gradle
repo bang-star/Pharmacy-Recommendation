@@ -30,6 +30,9 @@ dependencies {
 	// spring-retry
 	implementation 'org.springframework.retry:spring-retry'
 
+	// handlebars
+	implementation 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.4'
+
 	compileOnly 'org.projectlombok:lombok'
 
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
