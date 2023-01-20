@@ -3,14 +3,17 @@ package com.example.direction.service;
 import com.example.api.dto.DocumentDto;
 import com.example.api.dto.KakaoApiResponseDto;
 import com.example.api.service.KakaoAddressSearchService;
+import com.example.direction.dto.OutputDto;
 import com.example.direction.entity.Direction;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -20,12 +23,13 @@ public class PharmacyRecommendationService {
     private final KakaoAddressSearchService kakaoAddressSearchService;
     private final DirectionService directionService;
 
-    public void recommendPharmacyList(String address) {
+    public List<OutputDto> recommendPharmacyList(String address) {
         KakaoApiResponseDto kakaoApiResponseDto = kakaoAddressSearchService.requestAddressSearch(address);
 
         if(Objects.isNull(kakaoApiResponseDto) || CollectionUtils.isEmpty(kakaoApiResponseDto.getDocumentList())) {
             log.error("[recommendPharmacyList - recommendPharmacyList Fail] Input address: {}", address);
-            return;
+
+            return Collections.emptyList();
         }
 
         DocumentDto documentDto = kakaoApiResponseDto.getDocumentList().get(0);
@@ -33,6 +37,19 @@ public class PharmacyRecommendationService {
         // List<Direction> directions = directionService.buildDirectionList(documentDto);
         List<Direction> directions = directionService.buildDirectionListByCategoryApi(documentDto);
 
-        directionService.saveAll(directions);
+        return directionService.saveAll(directions)
+                .stream()
+                .map(this::convertToOutputDto)
+                .collect(Collectors.toList());
+    }
+
+    private OutputDto convertToOutputDto(Direction direction){
+        return OutputDto.builder()
+                .pharmacyName(direction.getTargetPharmacyName())
+                .pharmacyAddress(direction.getTargetAddress())
+                .directionUrl("preparing ...")
+                .roadViewUrl("preparing ...")
+                .distance(String.format("%.2f km", direction.getDistance()))
+                .build();
     }
 }
