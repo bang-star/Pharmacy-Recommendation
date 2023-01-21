@@ -1,7 +1,6 @@
 package com.example.api.service
 
 import com.example.AbstractIntegrationContainerBaseTest
-import org.springframework.beans.factory.annotation.Autowired
 
 import java.nio.charset.StandardCharsets
 

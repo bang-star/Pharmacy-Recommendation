@@ -1,9 +1,9 @@
 package com.example.api.service
 
 import com.example.AbstractIntegrationContainerBaseTest
+import com.example.api.dto.DocumentDto
 import com.example.api.dto.KakaoApiResponseDto
 import com.example.api.dto.MetaDto
-import com.example.api.dto.DocumentDto
 import com.fasterxml.jackson.databind.ObjectMapper
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
