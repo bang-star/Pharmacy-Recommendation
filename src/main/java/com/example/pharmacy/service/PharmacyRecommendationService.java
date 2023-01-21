@@ -1,10 +1,12 @@
-package com.example.direction.service;
+package com.example.pharmacy.service;
 
 import com.example.api.dto.DocumentDto;
 import com.example.api.dto.KakaoApiResponseDto;
 import com.example.api.service.KakaoAddressSearchService;
 import com.example.direction.dto.OutputDto;
 import com.example.direction.entity.Direction;
+import com.example.direction.service.Base62Service;
+import com.example.direction.service.DirectionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
