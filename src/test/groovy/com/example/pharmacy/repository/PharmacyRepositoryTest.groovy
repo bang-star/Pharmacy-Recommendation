@@ -2,7 +2,6 @@ package com.example.pharmacy.repository
 
 import com.example.AbstractIntegrationContainerBaseTest
 import com.example.pharmacy.entity.Pharmacy
-import com.example.pharmacy.repository.PharmacyRepository
 import org.springframework.beans.factory.annotation.Autowired
 
 import java.time.LocalDateTime
