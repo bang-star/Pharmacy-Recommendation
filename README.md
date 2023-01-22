@@ -57,8 +57,10 @@
 ## Tech Stack
 
  - JDK 17
+ - Groovy
  - Spring Boot 2.7.7 
  - Spring Data JPA 
+ - Spring Retry
  - Gradle 
  - Handlebars 
  - Lombok 
@@ -69,3 +71,6 @@
  - MariaDB 
  - Spock 
  - Testcontainers
+ - MockWebServer
+ - Handlerbars
+ - Base62
